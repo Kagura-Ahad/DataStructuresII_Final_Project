@@ -2,11 +2,11 @@ from data_insertion import insert_from_CSV
 from tkinter import ttk
 import tkinter as tk
 
-
-finger_trees = insert_from_CSV()[0]
-greenhouse_values = insert_from_CSV()[1]
-time_values = insert_from_CSV()[2]
-date_values = insert_from_CSV()[3]
+treedata = insert_from_CSV()
+finger_trees = treedata[0]
+greenhouse_values = treedata[1]
+time_values = treedata[2]
+date_values = treedata[3]
 
 # GUI design
 
