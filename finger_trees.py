@@ -70,7 +70,7 @@ class FingerTree:
             if self.deeper is None: 
                 self.deeper = FingerTree(Affix(), None, Affix())
                 for i in node:
-                    self.deeper.prefix = self.deeper.prefix | Affix(i) 
+                    self.deeper.prefix = Affix(i) | self.deeper.prefix  
             else:
                 # If there is a deeper tree, prepend the new node's elements to it
                 for i in node: 
@@ -86,7 +86,7 @@ class FingerTree:
         # Check if the current suffix is full (has 4 elements)
         if len(self.suffix.elements) == 4:
             # Create a new node with the last three elements of the current suffix
-            node = (self.suffix.elements[3], self.suffix.elements[2], self.suffix.elements[1])
+            node = (self.suffix.elements[0], self.suffix.elements[1], self.suffix.elements[2])
             if self.deeper is None:
                 # If there is no deeper tree, create one with the new node's elements
                 self.deeper = FingerTree(Affix(), None, Affix())
@@ -97,10 +97,10 @@ class FingerTree:
                 for i in node:
                     self.deeper.append(i)
             # Set the new suffix to be x and the first element of the old suffix
-            self.suffix = Affix(x, self.suffix.elements[0])
+            self.suffix = Affix(self.suffix.elements[3], x)
         else:
             # If the current suffix is not full, add the new element to it
-            self.suffix = Affix(x) | self.suffix
+            self.suffix = self.suffix | Affix(x)
 
 
 

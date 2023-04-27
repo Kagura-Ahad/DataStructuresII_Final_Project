@@ -12,8 +12,12 @@ def insert_from_CSV() -> Dict[Tuple[str, str], FingerTree]:
         greenhouse_values = []
         time_values = []
         date_values = []
+        value_lst = []
         # Skip the header row
         next(reader)
+        count = 0
+        lst1 = []
+        lst2 = []
         # Loop through each row in the CSV file
         for row in reader:
             if str(row[0]) == '':
@@ -23,7 +27,7 @@ def insert_from_CSV() -> Dict[Tuple[str, str], FingerTree]:
                 # Extract the date and temperature values from the row
                 date = row[0].split()[0]
                 time = row[0].split()[1]
-                temperature = row[1]
+                temperature = row[1] 
                 # Loop through each greenhouse column and create a finger tree for each day and greenhouse
                 for i in range(1, len(row)):
                     greenhouse = "greenhouse" + str(i)
@@ -38,7 +42,15 @@ def insert_from_CSV() -> Dict[Tuple[str, str], FingerTree]:
                     if (date, greenhouse) not in finger_trees:
                         finger_trees[(date, greenhouse)] = FingerTree.empty()
                     # Insert the temperature reading into the finger tree
-                    finger_trees[(date, greenhouse)].append(value)
+                    if count <= 12:
+                        print("prepend", value)
+                        finger_trees[(date, greenhouse)].prepend(value)
+                    else:
+                        print("append", value)
+                        finger_trees[(date, greenhouse)].append(value)
+                count += 1
+                if count == 24:
+                    count = 0
     returnlist = []
     returnlist.append(finger_trees)
     returnlist.append(greenhouse_values)
@@ -46,9 +58,9 @@ def insert_from_CSV() -> Dict[Tuple[str, str], FingerTree]:
     returnlist.append(date_values)
     return returnlist
 
-# finger_trees = insert_from_CSV()
-# print(insert_from_CSV()[0])
+finger_trees = insert_from_CSV()
+
 
 # print(finger_trees[('2/10/2012', 'greenhouse1')].treeLast())
 # print(finger_trees[('2/10/2012', 'greenhouse1')].treeHead())
-# print(finger_trees[('2/10/2012', 'greenhouse1')])
+print(finger_trees[('2/10/2012', 'greenhouse1')])
