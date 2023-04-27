@@ -14,6 +14,6 @@ Why Temperature monitoring system using Fingertree?
 >3)Can search for a certain temperature in O (log(n))
 
 >4)Can search for a certain temperature in O (log(n)+k)
->
-If I use a fingertree instance to store the hourly temperatures of each day of each greenhouse for the past 30 days, I can access the temperature of the first and the last hour of each day very quickly and then I can calculate the difference in them to get my fluctuations of each day of each greenhouse of the past 30 days. 
+
+>If I use a fingertree instance to store the hourly temperatures of each day of each greenhouse for the past 30 days, I can access the temperature of the first and the last hour of each day very quickly and then I can calculate the difference in them to get my fluctuations of each day of each greenhouse of the past 30 days. 
 Then I can average those 30 fluctuations for each greenhouse and then can decide which greenhouse has suitable average fluctuation for my plant to grow.
