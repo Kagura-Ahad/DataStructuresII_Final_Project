@@ -1,9 +1,9 @@
 # DataStructuresII_Final_Project
 Spring_2023-Data_StructuresII-FinalProject 
 Why do I need a Temperature Monitoring System?
-I am a landlord trying to grow a plant that will flower in two months which is usually grown in the current season. 
-The specification I need to grow for that plant is that the temperature conditions it is going through should not fluctuate that much throughout the day. 
-Assuming that the season for the past 10 days will remain the same for the upcoming two months, I decide to take the fluctuations of each day of past one month of all of the greenhouses I own, average them, such that I get the average fluctuations for the past one month for all of my greenhouses, and then decide in which greenhouse do I plant that plant.
+>I am a landlord trying to grow a plant that will flower in two months which is usually grown in the current season. 
+>The specification I need to grow for that plant is that the temperature conditions it is going through should not fluctuate that much throughout the day. 
+>Assuming that the season for the past 10 days will remain the same for the upcoming two months, I decide to take the fluctuations of each day of past one month of all of >the greenhouses I own, average them, such that I get the average fluctuations for the past one month for all of my greenhouses, and then decide in which greenhouse do I >plant that plant.
 
 Why Temperature monitoring system using Fingertree?
 >Can get overall first and last values of temperatures in O (1)
