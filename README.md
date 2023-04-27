@@ -1,5 +1,6 @@
 # DataStructuresII_Final_Project
 Spring_2023-Data_StructuresII-FinalProject 
+
 Why do I need a Temperature Monitoring System?
 >I am a landlord trying to grow a plant that will flower in two months which is usually grown in the current season. 
 The specification I need to grow for that plant is that the temperature conditions it is going through should not fluctuate that much throughout the day. 
