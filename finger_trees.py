@@ -269,18 +269,19 @@ class FingerTree:
 
 
 
-    
+
 def fromList(lst: List[T]) -> 'FingerTree[T]':
     tree = FingerTree.empty()
     for x in lst:
         tree.append(x)
     return tree
 
-layer3 = FingerTree.empty()
-layer2 = FingerTree(Affix(1, 2, 3), layer3, Affix(4, 5, 6))
-layer1 = FingerTree(Affix(7, 8), layer2, Affix(11, 10))
-ft = layer1
+#function_tests
+# layer3 = FingerTree.empty()
+# layer2 = FingerTree(Affix(1, 2, 3), layer3, Affix(4, 5, 6))
+# layer1 = FingerTree(Affix(7, 8), layer2, Affix(11, 10))
+# ft = layer1
 
-print(ft)
+# print(ft)
 
-print(ft.split(3))  
+# print(ft.split(3))  
